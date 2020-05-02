@@ -13,7 +13,6 @@ double max_solution(double array[], int size){
             max = array[i];
     }
     return max;
-
 }
 
 CU_pSuite* CreateSuite2(char* strName,bool n_useSolution){
@@ -50,6 +49,12 @@ void test_max(void){
 
 
 }
+void test_max_divisionByZero(void){
+    double arr[] = {0};
+    CU_ASSERT_EQUAL(max(arr,0) ,0);
+
+}
+
 void test_max_zero(void){
     double arr[] = {0};
     double arr2[] = {0,0,0,0};

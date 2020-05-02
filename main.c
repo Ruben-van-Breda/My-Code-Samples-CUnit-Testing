@@ -6,7 +6,22 @@
 #include "Average_Tests.h"
 #include "Max_Tests.h"
 
+void Debug(){
+    int n = 4;
+    double arr[] = {1,2,3};
+    printf("10/4 avg = %.2lf should be 2\n",average(arr,3)); // = 1.5 should be 2.5
+    double arr2[] = {1,2,3,4,0};
+    printf("avg = %.2lf should be 4\n",average(arr2,n+1)); // = 2 should be 4
+
+    double arr3[] = {1,2,3,4,5};
+    printf("\navg = %.2lf\n",average(arr3,5)); // = 2 should be 3
+    double arr4[] = {1,2,3,4,5};
+    printf("avg = %.2lf\n",average(arr4,6)); // = 2.5 should be 3.5
+
+}
+
 int main() {
+    Debug();
     //AVERAGE TEST
     CU_initialize_registry();
     CU_pSuite suite = CreateSuite("AVERAGE_TEST",false);
@@ -41,19 +56,7 @@ int main() {
 }
 
 
-void Debug(){
-    int n = 4;
-    double arr[] = {1,2,3,4};
-    printf("10/4 avg = %.2lf should be 2.5\n",average(arr,n)); // = 1.5 should be 2.5
-    double arr2[] = {1,2,3,4,0};
-    printf("avg = %.2lf should be 4\n",average(arr2,n+1)); // = 2 should be 4
 
-    double arr3[] = {1,2,3,4,5};
-    printf("\navg = %.2lf\n",average(arr3,5)); // = 2 should be 3
-    double arr4[] = {1,2,3,4,5};
-    printf("avg = %.2lf\n",average(arr4,6)); // = 2.5 should be 3.5
-
-}
 
 void DebugMax(){
     double arr2[] = {-1,-2,-3};

@@ -8,13 +8,10 @@
 bool usingSolution = 0;
 double average_solution(double array[], int size){
     double sum = 0;
-
     for(int i = 0; i < size; i++){
         sum += array[i];
-
     }
     return sum/size;
-
 }
 CU_pSuite* CreateSuite(char* strName, bool n_useSolution){
     usingSolution = n_useSolution;
@@ -74,7 +71,7 @@ void test_avg_increasing_size_by_one(void){
 void test_avg_zero(void){
     /*This works because the sum is always 0 and 0/any integer is zero,
      * So, this test works for the average and average_solution functions
-     * 0/4 is equivalent to 0/5
+     * 0/4 is equivalent to 0/5 so this will pass test cases
      * */
     double arr[] = {0};
     double arr2[] = {0,0,0,0};
@@ -103,6 +100,7 @@ void test_avg_all_same(void){
     }
 }
 void test_avg_negative(void){
+
     double arr[] = {-1,-2,-3};
     double arr2[] = {-1.9,-99,-0,-100};
     double arr3[] = {-1,0,-3,-4};
